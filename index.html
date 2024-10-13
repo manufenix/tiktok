@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Wallpaper Gifts on TikTok LIVE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size: 16px;}
+img {margin-bottom: -8px;}
+.mySlides {display: none;}
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
+</style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+function hexTorgb(hex) {
+  return "rgb(" + ['0x' + hex[1] + hex[2] | 0, '0x' + hex[3] + hex[4] | 0, '0x' + hex[5] + hex[6] | 0] + ")";
+}
+
+			
+
+function generateOverlay() {
+            let username = $('#uniqueIdInput').val();
+			let minDiamonds = $('#minDiamonds').val();
+			let fColor = $('#fontColor').val(); 
+			let fontColor = hexTorgb(fColor);
+			let bg = $('#bgColor').val(); 
+			let bgColor = hexTorgb(bg);
+			let maxTime = $('#maxTime').val();
+            let url = `/obs.html?username=${username}&minDiamonds=${minDiamonds}&bgColor=${bgColor}&fontColor=${fontColor}&maxTime=${maxTime}&flipHorizontal=${switchStatus}`;
+        
+            if(username) {
+                window.open(url, '_blank');
+            } else {
+                alert("Enter username");
+            }
+        }
+</script>
+</head>
+<body class="w3-content w3-black" style="max-width:1500px;">
+
+<!-- Header with Slideshow -->
+<header class="w3-display-container w3-center">
+  <div class="mySlides w3-animate-opacity">
+    <img class="w3-image" src="./tiktokWall.jpg" alt="Wallpaper Gifts on TikTok LIVE" style="min-width:500px" width="1500" height="845">
+    <div class="w3-display-middle" style="margin: auto">
+      <div class="w3-black w3-padding-large w3-round-large">
+        <h1 class="w3-xlarge">Wallpaper Gifts on TikTok LIVE</h1>
+		<p>Super simple use: free of charge</p>
+		<div class="inputFields">
+        <p>Enter the @username of a TikTok user who is on LIVE:</p>
+        <input type="text" id="uniqueIdInput">
+		<p>Enter the minimum diamonds of the gifts to be shown:</p>
+        <input type="text" id="minDiamonds" value="1">
+		<p>Enter the seconds that the last gift will be shown:</p>
+		<input type="text" id="maxTime" value="15">
+		<p>Select text color:</p>
+		<input type="color" id="fontColor" value="#FFFFFF">
+		<p>Select background color:</p>
+		<input type="color" id="bgColor" value="#FF0000">
+		<p>Flip horizontal:</p>
+		<label class="switch">
+			<input type="checkbox" checked id="flipVertical" value="true" name="flip">
+			<div class="slider round"></div>
+		</label>
+    </div>
+        <p><a href="#" onclick="generateOverlay()"><button class="w3-button w3-block w3-green w3-round">Launch </button></p>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
+  <div class="w3-section">
+    <p>Made with ❤️ by: <a href="https://www.tiktok.com/@manufenix49">manufenix49</a></p>
+  </div>
+  <p class="w3-medium">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</a></p>
+</footer>
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+let switchStatus = true;
+$("#flipVertical").on('change', function() {
+	if ($(this).is(':checked')) {
+		switchStatus = true;
+	}
+	else {
+		switchStatus = false;
+	}
+});
+</script>
+</body>
+</html>
